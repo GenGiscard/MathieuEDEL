@@ -65,7 +65,7 @@ h2 em{font-style:italic;color:var(--clay)}
 .soin-price{margin-top:1rem;font-size:.73rem;letter-spacing:.08em;color:var(--clay);border-top:1px solid var(--sand);padding-top:.8rem}
 
 /* ═══ QUIZ ═══ */
-#quiz{background:var(--ink);padding:0}
+#quiz{background:var(--ink);padding:0;outline:5px solid #ffe600;outline-offset:-5px;}
 /* Teaser banner */
 .quiz-banner{display:grid;grid-template-columns:1fr 1fr;min-height:380px;align-items:center}
 .quiz-banner-left{padding:5rem 4rem 5rem 6rem}
@@ -123,36 +123,40 @@ input[type=range]{width:100%;accent-color:var(--warm);height:6px;cursor:pointer}
 /* ── BODY MAP ── */
 .body-map-wrap{display:flex;gap:4rem;justify-content:center;margin-bottom:2rem;flex-wrap:wrap;align-items:flex-start}
 .body-view{text-align:center}
-.body-label{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:.8rem}
+.body-label{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--warm);margin-bottom:.8rem}
 .body-svg{cursor:crosshair;width:130px;height:auto;display:block;margin:0 auto}
 .body-svg:hover .body-touch{opacity:.04}
-.body-touch{fill:var(--clay);opacity:0;transition:opacity .3s}
+.body-touch{fill:var(--warm);opacity:0;transition:opacity .3s}
 .zones-selected{min-height:2.5rem;margin-bottom:1.5rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
-.zones-vide{font-size:.82rem;color:var(--muted);font-style:italic}
-.zone-tag{display:flex;align-items:center;gap:.5rem;padding:.35rem .85rem;background:var(--sand);border:1px solid rgba(139,94,60,.25);font-size:.78rem;color:var(--ink)}
-.zone-tag button{background:none;border:none;cursor:pointer;color:var(--clay);font-size:1rem;line-height:1;padding:0;font-weight:bold}
-.dot-pulse{animation:dotIn .3s ease forwards}
+.zones-vide{font-size:.82rem;color:rgba(245,239,230,.3);font-style:italic}
+.zone-tag{display:flex;align-items:center;gap:.5rem;padding:.35rem .85rem;background:rgba(212,168,118,.15);border:1px solid rgba(212,168,118,.3);font-size:.78rem;color:var(--warm)}
+.zone-tag button{background:none;border:none;cursor:pointer;color:var(--warm);font-size:1rem;line-height:1;padding:0;font-weight:bold}
 @keyframes dotIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:.9}}
-
 /* ── Pain characteristics ── */
 .pain-group{margin-bottom:2rem}
 .pain-group-title{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem;display:flex;align-items:center;gap:.8rem}
 .pain-group-title::after{content:'';flex:1;height:1px;background:var(--sand)}
-
 /* ── Résultat ── */
 #quiz-resultat{display:none;animation:fadeUp .5s ease}
-.resultat-card{background:var(--ink);color:var(--cream);padding:3rem;margin-top:2rem}
+.resultat-card{background:rgba(255,255,255,.04);border:1px solid rgba(212,168,118,.2);padding:3rem;margin-top:1rem}
 .resultat-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
 .resultat-emoji{font-size:2.5rem}
 .resultat-titre{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--warm)}
-.resultat-desc{font-size:.93rem;line-height:1.9;color:rgba(245,239,230,.75);margin-bottom:1.5rem}
-.resultat-soins{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.8rem}
-.resultat-soin-tag{padding:.4rem .9rem;border:1px solid var(--warm);color:var(--warm);font-size:.73rem;letter-spacing:.1em;text-transform:uppercase}
-.resultat-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.resultat-resa-btn{padding:.85rem 2rem;background:var(--clay);color:var(--cream);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;border:none;cursor:pointer;font-family:'Lato',sans-serif;transition:background .3s}
-.resultat-resa-btn:hover{background:var(--warm)}
-.resultat-restart{padding:.85rem 1.6rem;border:1px solid rgba(245,239,230,.3);color:rgba(245,239,230,.6);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;cursor:pointer;font-family:'Lato',sans-serif}
-.resultat-sauvegarde{margin-top:1.2rem;font-size:.75rem;color:rgba(245,239,230,.35);font-style:italic}
+.resultat-desc{font-size:.93rem;line-height:1.9;color:rgba(245,239,230,.65);margin-bottom:1.5rem}
+.resultat-soins{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem}
+.resultat-soin-tag{padding:.4rem .9rem;border:1px solid rgba(212,168,118,.4);color:var(--warm);font-size:.73rem;letter-spacing:.1em;text-transform:uppercase}
+/* BIG CTA */
+.resultat-cta-block{background:var(--warm);padding:2.5rem;text-align:center;margin-bottom:1.2rem}
+.resultat-cta-title{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:300;color:var(--ink);margin-bottom:.5rem}
+.resultat-cta-sub{font-size:.85rem;color:rgba(26,20,16,.6);margin-bottom:1.5rem}
+.resultat-resa-btn{display:inline-flex;align-items:center;gap:.8rem;padding:1.1rem 3rem;background:var(--ink);color:var(--cream);font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;border:none;cursor:pointer;font-family:'Cinzel',serif;transition:all .3s;font-weight:500}
+.resultat-resa-btn:hover{background:var(--clay)}
+.resultat-resa-btn .arr{font-size:1.1rem;transition:transform .3s}
+.resultat-resa-btn:hover .arr{transform:translateX(5px)}
+.resultat-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.resultat-restart{font-size:.75rem;color:rgba(245,239,230,.3);cursor:pointer;text-decoration:underline;background:none;border:none;font-family:'Lato',sans-serif}
+.resultat-restart:hover{color:rgba(245,239,230,.6)}
+.resultat-sauvegarde{font-size:.75rem;color:rgba(245,239,230,.25);font-style:italic}
 
 /* ── Réservation ── */
 #reservation{background:var(--ink);color:var(--cream)}
@@ -258,10 +262,14 @@ footer{background:var(--ink);color:rgba(245,239,230,.4);padding:2.2rem 0;text-al
   .hero-left{padding:7rem 1.5rem 4rem}
   .apropos-grid,.resa-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
   .soins-grid{grid-template-columns:1fr}
-  .form-row,.quiz-field-row,.fiche-grid{grid-template-columns:1fr}
+  .form-row,.fiche-grid{grid-template-columns:1fr}
   .body-map-wrap{gap:2rem}
   .resultat-card{padding:1.8rem}
   .db-header{flex-direction:column;gap:1rem;align-items:flex-start}
+  .quiz-banner{grid-template-columns:1fr}
+  .quiz-banner-left{padding:3rem 1.5rem}
+  .quiz-banner-right{display:none}
+  .quiz-steps-container{padding:0 1.5rem}
 }
 </style>
 </head>
@@ -334,16 +342,41 @@ footer{background:var(--ink);color:rgba(245,239,230,.4);padding:2.2rem 0;text-al
 </section>
 
 <!-- ═══════════════════════════════════
-     QUESTIONNAIRE (8 étapes)
+     QUESTIONNAIRE (7 étapes)
 ═══════════════════════════════════ -->
 <section id="quiz">
-  <div class="container">
-    <div class="quiz-intro">
-      <div class="sec-tag">Questionnaire</div>
-      <h2>Quel est votre<br><em>besoin ?</em></h2>
-      <p>Quelques questions pour mieux vous connaître — et permettre à Mathieu Edel de préparer votre consultation en avance.</p>
+
+  <!-- ── TEASER BANNER ── -->
+  <div class="quiz-banner">
+    <div class="quiz-banner-left">
+      <div class="quiz-banner-tag">Outil interactif</div>
+      <h2 class="quiz-banner-h2">Préparez votre<br>consultation <em>en avance</em></h2>
+      <p class="quiz-banner-sub">Répondez à 7 questions sur votre situation. Mathieu Edel consultera vos réponses avant votre rendez-vous pour personnaliser votre prise en charge dès la première minute.</p>
+      <div class="quiz-banner-perks">
+        <div class="quiz-perk"><span class="quiz-perk-icon">🗺️</span> Indiquez où vous avez mal sur un schéma corporel</div>
+        <div class="quiz-perk"><span class="quiz-perk-icon">🔍</span> Décrivez la nature et le rythme de votre gêne</div>
+        <div class="quiz-perk"><span class="quiz-perk-icon">✉️</span> Vos réponses arrivent directement au praticien</div>
+        <div class="quiz-perk"><span class="quiz-perk-icon">⏱️</span> 3 minutes suffisent</div>
+      </div>
+      <button class="quiz-start-btn" onclick="demarrerQuiz()">
+        Commencer le questionnaire <span class="arrow">→</span>
+      </button>
     </div>
-    <div class="quiz-progress" id="quiz-progress"></div>
+    <div class="quiz-banner-right">
+      <div class="quiz-step-preview"><span class="quiz-step-num">01</span><span class="quiz-step-label">Quel est votre motif principal ?</span></div>
+      <div class="quiz-step-preview"><span class="quiz-step-num">02</span><span class="quiz-step-label">Où ressentez-vous la gêne ? (schéma)</span></div>
+      <div class="quiz-step-preview"><span class="quiz-step-num">03</span><span class="quiz-step-label">Nature, étendue, rythme de la douleur</span></div>
+      <div class="quiz-step-preview"><span class="quiz-step-num">04</span><span class="quiz-step-label">Depuis combien de temps ?</span></div>
+      <div class="quiz-step-preview"><span class="quiz-step-num">05</span><span class="quiz-step-label">Intensité au quotidien</span></div>
+      <div class="quiz-step-preview"><span class="quiz-step-num">06</span><span class="quiz-step-label">Suivi médical actuel</span></div>
+      <div class="quiz-step-preview"><span class="quiz-step-num">07</span><span class="quiz-step-label">Vos attentes pour la consultation</span></div>
+    </div>
+  </div>
+
+  <!-- ── ÉTAPES DU QUIZ ── -->
+  <div id="quiz-steps">
+    <div class="quiz-steps-container">
+      <div class="quiz-progress" id="quiz-progress"></div>
 
     <!-- ── Étape 1 : Motif ── -->
     <div class="quiz-etape active" id="etape-1">
@@ -596,23 +629,7 @@ footer{background:var(--ink);color:rgba(245,239,230,.4);padding:2.2rem 0;text-al
       </div>
       <div class="quiz-nav">
         <button class="quiz-back" onclick="aller(6)">← Retour</button>
-        <button class="quiz-next" id="next-7" onclick="aller(8)" disabled>Suivant →</button>
-      </div>
-    </div>
-
-    <!-- ── Étape 8 : Identité ── -->
-    <div class="quiz-etape" id="etape-8">
-      <div class="quiz-question">Qui êtes-vous ?</div>
-      <div class="quiz-hint">Ces informations permettent à Mathieu Edel de vous identifier avant la consultation.</div>
-      <div class="quiz-field-row">
-        <input class="quiz-field" id="q-prenom" type="text" placeholder="Prénom *" oninput="majIdentite()"/>
-        <input class="quiz-field" id="q-nom" type="text" placeholder="Nom *" oninput="majIdentite()"/>
-      </div>
-      <input class="quiz-field" id="q-tel" type="tel" placeholder="Téléphone (optionnel)"/>
-      <input class="quiz-field" id="q-email" type="email" placeholder="E-mail (optionnel)"/>
-      <div class="quiz-nav">
-        <button class="quiz-back" onclick="aller(7)">← Retour</button>
-        <button class="quiz-next" id="next-8" onclick="terminerQuiz()" disabled>Voir mes résultats ✦</button>
+        <button class="quiz-next" id="next-7" onclick="terminerQuiz()" disabled>Voir mes résultats ✦</button>
       </div>
     </div>
 
@@ -625,15 +642,25 @@ footer{background:var(--ink);color:rgba(245,239,230,.4);padding:2.2rem 0;text-al
         </div>
         <p class="resultat-desc" id="r-desc"></p>
         <div class="resultat-soins" id="r-soins"></div>
-        <div class="resultat-actions">
-          <button class="resultat-resa-btn" onclick="document.querySelector('#reservation').scrollIntoView({behavior:'smooth'})">Prendre rendez-vous →</button>
-          <button class="resultat-restart" onclick="relancerQuiz()">Refaire le questionnaire</button>
+
+        <!-- BIG RDV BUTTON -->
+        <div class="resultat-cta-block">
+          <div class="resultat-cta-title">Prêt(e) à consulter Mathieu Edel ?</div>
+          <div class="resultat-cta-sub">Vos réponses ont été transmises. Prenez rendez-vous dès maintenant — votre séance sera préparée à l'avance.</div>
+          <button class="resultat-resa-btn" onclick="allerRdv()">
+            Prendre rendez-vous <span class="arr">→</span>
+          </button>
         </div>
-        <p class="resultat-sauvegarde">✓ Vos réponses ont été enregistrées — Mathieu Edel les consultera pour préparer votre rendez-vous.</p>
+
+        <div class="resultat-footer">
+          <p class="resultat-sauvegarde">✓ Questionnaire enregistré · Mathieu Edel le consultera avant votre séance</p>
+          <button class="resultat-restart" onclick="relancerQuiz()">Recommencer le questionnaire</button>
+        </div>
       </div>
     </div>
 
-  </div>
+    </div><!-- /quiz-steps-container -->
+  </div><!-- /quiz-steps -->
 </section>
 
 <!-- RÉSERVATION -->
@@ -696,9 +723,9 @@ footer{background:var(--ink);color:rgba(245,239,230,.4);padding:2.2rem 0;text-al
     <div class="contact-grid">
       <div>
         <h3>Cabinet de Médecine Chinoise</h3>
-        <div class="c-item"><div class="c-icon">📍</div><div class="c-text"><strong>Adresse</strong>Cabinet de Médecine Chinoise<br>Saint-Dizier, 52100 — Haute-Marne</div></div>
-        <div class="c-item"><div class="c-icon">📞</div><div class="c-text"><strong>Téléphone</strong><a href="tel:+33XXXXXXXXX">+33 X XX XX XX XX</a></div></div>
-        <div class="c-item"><div class="c-icon">✉</div><div class="c-text"><strong>E-mail</strong><a href="mailto:contact@mathieu-edel.fr">contact@mathieu-edel.fr</a></div></div>
+        <div class="c-item"><div class="c-icon">📍</div><div class="c-text"><strong>Adresse</strong>Cabinet de Médecine Chinoise<br>37 bis rue Maréchal de Lattre de Tassigny<br>Saint-Dizier, 52100 — Haute-Marne</div></div>
+        <div class="c-item"><div class="c-icon">📞</div><div class="c-text"><strong>Téléphone</strong><a href="tel:+33677094084">+33 6 77 09 40 84</a></div></div>
+        <div class="c-item"><div class="c-icon">✉</div><div class="c-text"><strong>E-mail</strong><a href="mailto:XXXXX@XXXXX.XX">XXXXX@XXXXX.XX</a></div></div>
         <div class="c-item"><div class="c-icon">🕐</div><div class="c-text"><strong>Horaires</strong>Lun–Ven : 9h–19h · Sam : 9h–13h<br>Fermé le dimanche</div></div>
       </div>
       <div class="map-box">
@@ -776,9 +803,9 @@ const REPONSES = {
 ════════════════════════════════════ */
 const Q = {
   motif:'', zones:[], douleurNature:[], douleurEtendue:'', douleurRythme:'', douleurFacteurs:[],
-  duree:'', intensite:3, medecin:'', attentes:[], prenom:'', nom:'', tel:'', email:''
+  duree:'', intensite:3, medecin:'', attentes:[]
 };
-const TOTAL = 8;
+const TOTAL = 7;
 
 // Init progress bar
 (function(){
@@ -790,6 +817,15 @@ const TOTAL = 8;
     bar.appendChild(d);
   }
 })();
+
+function demarrerQuiz(){
+  document.getElementById('quiz-steps').classList.add('visible');
+  document.getElementById('quiz-steps').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function allerRdv(){
+  document.querySelector('#reservation').scrollIntoView({behavior:'smooth'});
+}
 
 function majProgress(n){
   for(let i=1;i<=TOTAL;i++){
@@ -866,11 +902,6 @@ document.getElementById('choix-attentes').querySelectorAll('.quiz-btn.multi').fo
 });
 
 function majIntensite(v){ Q.intensite=parseInt(v); document.getElementById('val-intensite').textContent=v+' / 5'; }
-function majIdentite(){
-  Q.prenom=document.getElementById('q-prenom').value.trim();
-  Q.nom=document.getElementById('q-nom').value.trim();
-  document.getElementById('next-8').disabled=!(Q.prenom&&Q.nom);
-}
 
 /* ════════════════════════════════════
    BODY MAP
@@ -978,8 +1009,6 @@ function supprimerZoneParLabel(label){
    TERMINER QUIZ
 ════════════════════════════════════ */
 function terminerQuiz(){
-  Q.tel=document.getElementById('q-tel').value.trim();
-  Q.email=document.getElementById('q-email').value.trim();
   const rep=REPONSES[Q.motif]||REPONSES.autre;
 
   document.getElementById('r-emoji').textContent=rep.emoji;
@@ -1010,7 +1039,6 @@ function sauvegarder(rep){
   fiches.unshift({
     id:Date.now(),
     date:new Date().toLocaleString('fr-FR'),
-    prenom:Q.prenom,nom:Q.nom,tel:Q.tel,email:Q.email,
     motif:Q.motif,motifLabel:MOTIF_L[Q.motif]||Q.motif,
     zones:Q.zones.map(z=>z.label),
     douleurNature:Q.douleurNature.map(v=>NATURE_L[v]||v),
@@ -1027,12 +1055,11 @@ function sauvegarder(rep){
 }
 
 function relancerQuiz(){
-  Object.assign(Q,{motif:'',zones:[],douleurNature:[],douleurEtendue:'',douleurRythme:'',douleurFacteurs:[],duree:'',intensite:3,medecin:'',attentes:[],prenom:'',nom:'',tel:'',email:''});
+  Object.assign(Q,{motif:'',zones:[],douleurNature:[],douleurEtendue:'',douleurRythme:'',douleurFacteurs:[],duree:'',intensite:3,medecin:'',attentes:[]});
   document.querySelectorAll('.quiz-btn').forEach(b=>b.classList.remove('selected'));
   document.querySelectorAll('.quiz-next').forEach(b=>b.disabled=true);
   document.getElementById('slider-intensite').value=3;
   document.getElementById('val-intensite').textContent='3 / 5';
-  ['q-prenom','q-nom','q-tel','q-email'].forEach(id=>document.getElementById(id).value='');
   // Clear SVG dots
   ['svg-front','svg-back'].forEach(id=>{ document.getElementById(id).querySelectorAll('g[data-label]').forEach(g=>g.remove()); });
   majZonesList();
@@ -1117,17 +1144,14 @@ function renderFiches(fiches){
     const div=document.createElement('div');div.className='fiche';div.id='fiche-'+f.id;
     div.innerHTML=`
       <div class="fiche-header" onclick="toggleFiche(${f.id})">
-        <div class="fiche-nom">${f.prenom} ${f.nom.toUpperCase()}</div>
+        <div class="fiche-nom">Questionnaire du ${f.date}</div>
         <div class="fiche-meta">
-          <span class="fiche-date">${f.date}</span>
           <span class="fiche-motif-tag">${f.motifLabel}</span>
           ${!f.lu?'<span class="fiche-new">Nouveau</span>':''}
         </div>
       </div>
       <div class="fiche-body" id="body-${f.id}">
         <div class="fiche-grid">
-          <div class="fiche-row"><span>Téléphone</span><strong>${f.tel||'Non renseigné'}</strong></div>
-          <div class="fiche-row"><span>E-mail</span><strong>${f.email||'Non renseigné'}</strong></div>
           <div class="fiche-row"><span>Durée</span><strong>${f.duree}</strong></div>
           <div class="fiche-row"><span>Intensité</span><strong>${f.intensite} / 5</strong></div>
           <div class="fiche-row"><span>Étendue</span><strong>${f.douleurEtendue}</strong></div>
@@ -1167,9 +1191,9 @@ function toutEffacer(){
 function exporterCSV(){
   const fiches=JSON.parse(localStorage.getItem('edel_fiches')||'[]');
   if(!fiches.length){showToast('Aucune fiche à exporter.');return;}
-  const ent=['Date','Prénom','Nom','Téléphone','Email','Motif','Zones douloureuses','Nature','Étendue','Rythme','Facteurs','Durée','Intensité','Suivi médical','Attentes','Lu'];
+  const ent=['Date','Motif','Zones douloureuses','Nature','Étendue','Rythme','Facteurs','Durée','Intensité','Suivi médical','Attentes','Lu'];
   const lig=fiches.map(f=>[
-    f.date,f.prenom,f.nom,f.tel||'',f.email||'',f.motifLabel,
+    f.date,f.motifLabel,
     (f.zones||[]).join(' | '),(f.douleurNature||[]).join(' | '),
     f.douleurEtendue,f.douleurRythme,(f.douleurFacteurs||[]).join(' | '),
     f.duree,f.intensite+'/5',f.medecin,(f.attentes||[]).join(' | '),f.lu?'Oui':'Non'
