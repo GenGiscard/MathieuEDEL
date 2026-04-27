@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mathieu Edel — Médecine Chinoise & Acupuncture · Saint-Dizier</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#1a1410;--clay:#8b5e3c;--sand:#e8d9c4;--cream:#f5efe6;--sage:#7a8c6e;--moss:#4a5e3c;--warm:#d4a876;--muted:#8c7b6b}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4rem;background:rgba(245,239,230,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(139,94,60,.12);transition:padding .3s}
+.nav-logo{font-family:'Cinzel',serif;font-size:.95rem;letter-spacing:.18em;color:var(--clay);text-transform:uppercase}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--clay)}
+.nav-cta{font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;padding:.55rem 1.4rem;border:1px solid var(--clay);color:var(--clay);background:transparent;cursor:pointer;font-family:'Lato',sans-serif;text-decoration:none;transition:all .3s}
+.nav-cta:hover{background:var(--clay);color:var(--cream)}
+#accueil{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 4rem 6rem}
+.hero-tag{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--sage);margin-bottom:1.8rem}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,4.5vw,5rem);font-weight:300;line-height:1.08;color:var(--ink)}
+h1 em{font-style:italic;color:var(--clay)}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--muted);margin:1.4rem 0 2.8rem;line-height:1.8;max-width:26rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{padding:.9rem 2.2rem;background:var(--clay);color:var(--cream);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;border:none;cursor:pointer;font-family:'Lato',sans-serif;transition:background .3s;text-decoration:none;display:inline-block}
+.btn-primary:hover{background:var(--moss)}
+.btn-outline{padding:.9rem 2.2rem;border:1px solid var(--clay);color:var(--clay);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;cursor:pointer;font-family:'Lato',sans-serif;transition:all .3s;text-decoration:none;display:inline-block}
+.btn-outline:hover{background:var(--clay);color:var(--cream)}
+.hero-right{background:var(--sand);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-right::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 60% 40%,rgba(196,133,90,.18),transparent 60%)}
+.hero-circle{width:340px;height:340px;border-radius:50%;background:linear-gradient(145deg,rgba(196,133,90,.22),rgba(74,94,60,.15));display:flex;align-items:center;justify-content:center;animation:floatAnim 8s ease-in-out infinite}
+@keyframes floatAnim{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.hero-sym{font-size:8rem;opacity:.2}
+section{padding:6rem 0}
+.container{max-width:1100px;margin:0 auto;padding:0 2.5rem}
+.sec-tag{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--sage);margin-bottom:.9rem;display:flex;align-items:center;gap:1rem}
+.sec-tag::after{content:'';flex:0 0 2rem;height:1px;background:var(--sage)}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3vw,3rem);font-weight:300;line-height:1.15;color:var(--ink)}
+h2 em{font-style:italic;color:var(--clay)}
+#apropos{background:var(--cream)}
+.apropos-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.yy-wrap{width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,var(--sand),var(--cream));box-shadow:0 20px 60px rgba(139,94,60,.15);display:flex;align-items:center;justify-content:center;font-size:5.5rem;margin:0 auto;animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.badge{background:var(--clay);color:var(--cream);padding:1rem 1.2rem;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;line-height:1.7;margin-top:1.5rem}
+.badge strong{display:block;font-size:1.4rem;font-family:'Cinzel',serif}
+.apropos-text p{font-size:.93rem;line-height:1.9;color:var(--muted);margin-top:1.2rem}
+.creds{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:1.8rem}
+.cred{display:flex;gap:.8rem;align-items:flex-start}
+.cred-icon{font-size:1.2rem}
+.cred-text strong{display:block;font-size:.88rem;color:var(--ink)}
+.cred-text{font-size:.82rem;line-height:1.5;color:var(--muted)}
+#soins{background:var(--sand)}
+.soins-hd{text-align:center;margin-bottom:3.5rem}
+.soins-hd .sec-tag{justify-content:center}
+.soins-hd .sec-tag::after{display:none}
+.soins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.soin-card{background:var(--cream);padding:2.2rem 1.8rem;border-bottom:3px solid transparent;transition:transform .3s,border-color .3s,box-shadow .3s}
+.soin-card:hover{transform:translateY(-4px);border-color:var(--clay);box-shadow:0 16px 40px rgba(139,94,60,.12)}
+.soin-num{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.2em;color:var(--warm);margin-bottom:.8rem}
+.soin-icon{font-size:1.8rem;margin-bottom:.7rem}
+.soin-card h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;margin-bottom:.6rem;color:var(--ink)}
+.soin-card p{font-size:.84rem;line-height:1.8;color:var(--muted)}
+.soin-price{margin-top:1rem;font-size:.73rem;letter-spacing:.08em;color:var(--clay);border-top:1px solid var(--sand);padding-top:.8rem}
+
+/* ═══ QUIZ ═══ */
+#quiz{background:var(--ink);padding:0}
+/* Teaser banner */
+.quiz-banner{display:grid;grid-template-columns:1fr 1fr;min-height:380px;align-items:center}
+.quiz-banner-left{padding:5rem 4rem 5rem 6rem}
+.quiz-banner-tag{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--warm);margin-bottom:1rem;display:flex;align-items:center;gap:1rem}
+.quiz-banner-tag::after{content:'';flex:0 0 2rem;height:1px;background:var(--warm)}
+.quiz-banner-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,3vw,3.2rem);font-weight:300;line-height:1.12;color:var(--cream)}
+.quiz-banner-h2 em{font-style:italic;color:var(--warm)}
+.quiz-banner-sub{font-size:.92rem;line-height:1.9;color:rgba(245,239,230,.6);margin:1.2rem 0 2rem;max-width:28rem}
+.quiz-banner-perks{display:flex;flex-direction:column;gap:.7rem;margin-bottom:2.2rem}
+.quiz-perk{display:flex;align-items:center;gap:.8rem;font-size:.85rem;color:rgba(245,239,230,.7)}
+.quiz-perk-icon{font-size:1.1rem}
+.quiz-start-btn{display:inline-flex;align-items:center;gap:.8rem;padding:1.1rem 2.6rem;background:var(--warm);color:var(--ink);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;border:none;cursor:pointer;font-family:'Cinzel',serif;transition:all .3s;font-weight:500}
+.quiz-start-btn:hover{background:var(--clay);color:var(--cream)}
+.quiz-start-btn .arrow{font-size:1.1rem;transition:transform .3s}
+.quiz-start-btn:hover .arrow{transform:translateX(4px)}
+.quiz-banner-right{background:rgba(255,255,255,.03);border-left:1px solid rgba(245,239,230,.06);padding:4rem 4rem 4rem 5rem;display:flex;flex-direction:column;justify-content:center;gap:1.4rem}
+.quiz-step-preview{display:flex;align-items:center;gap:1rem;padding:.9rem 0;border-bottom:1px solid rgba(245,239,230,.06)}
+.quiz-step-preview:last-child{border-bottom:none}
+.quiz-step-num{font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.15em;color:var(--warm);min-width:1.5rem}
+.quiz-step-label{font-size:.85rem;color:rgba(245,239,230,.55)}
+/* Quiz steps wrapper (hidden until started) */
+#quiz-steps{display:none;padding:4rem 0;border-top:1px solid rgba(245,239,230,.08)}
+#quiz-steps.visible{display:block;animation:fadeUp .4s ease}
+.quiz-steps-container{max-width:860px;margin:0 auto;padding:0 3rem}
+.quiz-etape{display:none}
+.quiz-etape.active{display:block;animation:fadeUp .4s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.quiz-progress{display:flex;gap:5px;margin-bottom:2.5rem}
+.quiz-progress-dot{height:4px;flex:1;border-radius:2px;transition:background .4s;background:rgba(245,239,230,.12)}
+.quiz-progress-dot.done{background:var(--clay)}
+.quiz-progress-dot.active{background:var(--warm)}
+.quiz-question{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:var(--cream);margin-bottom:.4rem}
+.quiz-hint{font-size:.8rem;color:rgba(245,239,230,.4);margin-bottom:1.8rem;font-style:italic}
+.quiz-choix{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:2rem}
+.quiz-btn{display:flex;align-items:center;gap:.6rem;padding:.72rem 1.1rem;border:1px solid rgba(245,239,230,.15);background:rgba(255,255,255,.04);color:rgba(245,239,230,.8);font-family:'Lato',sans-serif;font-size:.86rem;cursor:pointer;transition:all .22s;text-align:left}
+.quiz-btn:hover{border-color:var(--warm);background:rgba(212,168,118,.1);color:var(--cream)}
+.quiz-btn.selected{border-color:var(--warm);background:var(--warm);color:var(--ink)}
+.q-icon{font-size:1.2rem}
+.intensite-wrap{margin-bottom:2rem}
+.intensite-labels{display:flex;justify-content:space-between;font-size:.75rem;color:rgba(245,239,230,.4);margin-bottom:.5rem}
+input[type=range]{width:100%;accent-color:var(--warm);height:6px;cursor:pointer}
+.intensite-val{text-align:center;font-family:'Cinzel',serif;font-size:1.8rem;color:var(--warm);margin-top:.5rem}
+.quiz-nav{display:flex;gap:1rem;margin-top:1rem;align-items:center;flex-wrap:wrap}
+.quiz-next{padding:.85rem 2.2rem;background:var(--warm);color:var(--ink);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;border:none;cursor:pointer;font-family:'Cinzel',serif;transition:background .3s}
+.quiz-next:hover:not(:disabled){background:var(--clay);color:var(--cream)}
+.quiz-next:disabled{background:rgba(245,239,230,.15);color:rgba(245,239,230,.3);cursor:not-allowed}
+.quiz-back{padding:.85rem 1.6rem;border:1px solid rgba(245,239,230,.2);color:rgba(245,239,230,.5);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;cursor:pointer;font-family:'Lato',sans-serif;transition:all .3s}
+.quiz-back:hover{background:rgba(245,239,230,.05);color:var(--cream)}
+.quiz-skip{font-size:.75rem;color:rgba(245,239,230,.3);cursor:pointer;text-decoration:underline;margin-left:auto;background:none;border:none;font-family:'Lato',sans-serif}
+.quiz-skip:hover{color:rgba(245,239,230,.6)}
+/* Pain groups on dark bg */
+.pain-group-title{color:rgba(245,239,230,.4)!important}
+.pain-group-title::after{background:rgba(245,239,230,.08)!important}
+
+/* ── BODY MAP ── */
+.body-map-wrap{display:flex;gap:4rem;justify-content:center;margin-bottom:2rem;flex-wrap:wrap;align-items:flex-start}
+.body-view{text-align:center}
+.body-label{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:.8rem}
+.body-svg{cursor:crosshair;width:130px;height:auto;display:block;margin:0 auto}
+.body-svg:hover .body-touch{opacity:.04}
+.body-touch{fill:var(--clay);opacity:0;transition:opacity .3s}
+.zones-selected{min-height:2.5rem;margin-bottom:1.5rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.zones-vide{font-size:.82rem;color:var(--muted);font-style:italic}
+.zone-tag{display:flex;align-items:center;gap:.5rem;padding:.35rem .85rem;background:var(--sand);border:1px solid rgba(139,94,60,.25);font-size:.78rem;color:var(--ink)}
+.zone-tag button{background:none;border:none;cursor:pointer;color:var(--clay);font-size:1rem;line-height:1;padding:0;font-weight:bold}
+.dot-pulse{animation:dotIn .3s ease forwards}
+@keyframes dotIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:.9}}
+
+/* ── Pain characteristics ── */
+.pain-group{margin-bottom:2rem}
+.pain-group-title{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem;display:flex;align-items:center;gap:.8rem}
+.pain-group-title::after{content:'';flex:1;height:1px;background:var(--sand)}
+
+/* ── Résultat ── */
+#quiz-resultat{display:none;animation:fadeUp .5s ease}
+.resultat-card{background:var(--ink);color:var(--cream);padding:3rem;margin-top:2rem}
+.resultat-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+.resultat-emoji{font-size:2.5rem}
+.resultat-titre{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--warm)}
+.resultat-desc{font-size:.93rem;line-height:1.9;color:rgba(245,239,230,.75);margin-bottom:1.5rem}
+.resultat-soins{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.8rem}
+.resultat-soin-tag{padding:.4rem .9rem;border:1px solid var(--warm);color:var(--warm);font-size:.73rem;letter-spacing:.1em;text-transform:uppercase}
+.resultat-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.resultat-resa-btn{padding:.85rem 2rem;background:var(--clay);color:var(--cream);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;border:none;cursor:pointer;font-family:'Lato',sans-serif;transition:background .3s}
+.resultat-resa-btn:hover{background:var(--warm)}
+.resultat-restart{padding:.85rem 1.6rem;border:1px solid rgba(245,239,230,.3);color:rgba(245,239,230,.6);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;background:transparent;cursor:pointer;font-family:'Lato',sans-serif}
+.resultat-sauvegarde{margin-top:1.2rem;font-size:.75rem;color:rgba(245,239,230,.35);font-style:italic}
+
+/* ── Réservation ── */
+#reservation{background:var(--ink);color:var(--cream)}
+#reservation .sec-tag{color:var(--warm)}
+#reservation .sec-tag::after{background:var(--warm)}
+#reservation h2{color:var(--cream)}
+#reservation h2 em{color:var(--warm)}
+.resa-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
+.resa-info p{font-size:.9rem;line-height:1.9;color:rgba(245,239,230,.6);margin-top:1.2rem}
+.hor-title{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);margin:2rem 0 .8rem}
+.hor-row{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid rgba(245,239,230,.08);font-size:.83rem;color:rgba(245,239,230,.65)}
+.hor-row.off{color:rgba(245,239,230,.25)}
+.form-card{background:rgba(255,255,255,.04);border:1px solid rgba(245,239,230,.1);padding:2.2rem}
+.form-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--cream);margin-bottom:1.8rem}
+.form-group{margin-bottom:1.2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:block;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,239,230,.45);margin-bottom:.4rem}
+input:not([type=range]),select,textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(245,239,230,.14);padding:.78rem .9rem;color:var(--cream);font-family:'Lato',sans-serif;font-size:.88rem;outline:none;transition:border-color .3s}
+input:not([type=range]):focus,select:focus,textarea:focus{border-color:var(--warm)}
+select option{background:#2a2018}
+textarea{resize:vertical;min-height:90px}
+.btn-submit{width:100%;padding:1rem;background:var(--clay);color:var(--cream);border:none;cursor:pointer;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;transition:background .3s;margin-top:.4rem}
+.btn-submit:hover{background:var(--warm)}
+.form-note{margin-top:.8rem;font-size:.72rem;color:rgba(245,239,230,.3);text-align:center;line-height:1.6}
+.err{border-color:#c4855a !important}
+#contact{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-grid h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;margin-bottom:2rem}
+.c-item{display:flex;gap:1.1rem;align-items:flex-start;margin-bottom:1.6rem}
+.c-icon{width:2.3rem;height:2.3rem;border:1px solid var(--clay);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;color:var(--clay)}
+.c-text strong{display:block;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink);margin-bottom:.2rem}
+.c-text{font-size:.88rem;line-height:1.6;color:var(--muted)}
+.c-text a{color:var(--clay);text-decoration:none}
+.map-box{background:var(--sand);border:1px solid rgba(139,94,60,.15);height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden}
+.map-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50%,rgba(196,133,90,.1),transparent 70%)}
+.map-box p{font-size:.85rem;text-align:center;line-height:1.6;color:var(--muted);z-index:1}
+.map-btn{padding:.65rem 1.5rem;border:1px solid var(--clay);color:var(--clay);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;background:transparent;cursor:pointer;font-family:'Lato',sans-serif;transition:all .3s;z-index:1}
+.map-btn:hover{background:var(--clay);color:var(--cream)}
+footer{background:var(--ink);color:rgba(245,239,230,.4);padding:2.2rem 0;text-align:center;font-size:.75rem;letter-spacing:.08em}
+.footer-logo{font-family:'Cinzel',serif;font-size:.95rem;letter-spacing:.2em;color:var(--warm);display:block;margin-bottom:.7rem;cursor:pointer;user-select:none}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:.8rem}
+.footer-links a{color:rgba(245,239,230,.4);text-decoration:none;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;transition:color .3s}
+.footer-links a:hover{color:var(--warm)}
+#toast{position:fixed;bottom:2rem;right:2rem;z-index:999;background:var(--sage);color:white;padding:1rem 1.8rem;font-size:.85rem;box-shadow:0 8px 30px rgba(0,0,0,.2);transform:translateY(150%);transition:transform .4s ease;max-width:320px;line-height:1.5}
+#toast.show{transform:translateY(0)}
+
+/* ═══ DASHBOARD ═══ */
+#overlay-pwd{display:none;position:fixed;inset:0;z-index:500;background:rgba(26,20,16,.85);backdrop-filter:blur(6px);align-items:center;justify-content:center}
+#overlay-pwd.on{display:flex}
+.pwd-box{background:var(--cream);padding:3rem;width:380px;text-align:center}
+.pwd-box h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;margin-bottom:.5rem}
+.pwd-box p{font-size:.83rem;color:var(--muted);margin-bottom:1.5rem}
+.pwd-box input{width:100%;border:1px solid rgba(139,94,60,.3);background:var(--cream);padding:.8rem 1rem;font-family:'Lato',sans-serif;font-size:.9rem;color:var(--ink);outline:none;text-align:center;letter-spacing:.2em;margin-bottom:.5rem}
+.pwd-box input:focus{border-color:var(--clay)}
+.pwd-err{font-size:.78rem;color:#c4855a;margin-bottom:1rem;min-height:1rem}
+.pwd-btns{display:flex;gap:.8rem}
+.pwd-ok{flex:1;padding:.85rem;background:var(--clay);color:var(--cream);border:none;cursor:pointer;font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase}
+.pwd-cancel{flex:1;padding:.85rem;border:1px solid var(--clay);color:var(--clay);background:transparent;cursor:pointer;font-family:'Lato',sans-serif;font-size:.75rem}
+#dashboard{display:none;position:fixed;inset:0;z-index:600;background:var(--ink);overflow-y:auto}
+#dashboard.on{display:block}
+.db-header{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2.5rem;border-bottom:1px solid rgba(245,239,230,.1);position:sticky;top:0;background:var(--ink);z-index:10}
+.db-title{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.2em;color:var(--warm);text-transform:uppercase}
+.db-subtitle{font-size:.75rem;color:rgba(245,239,230,.4);margin-top:.2rem}
+.db-actions{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap}
+.db-btn{padding:.55rem 1.2rem;border:1px solid rgba(245,239,230,.2);color:rgba(245,239,230,.6);background:transparent;cursor:pointer;font-family:'Lato',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;transition:all .3s}
+.db-btn:hover{border-color:var(--warm);color:var(--warm)}
+.db-btn.danger:hover{border-color:#c4855a;color:#c4855a}
+.db-close{padding:.55rem 1.2rem;background:var(--clay);color:var(--cream);border:none;cursor:pointer;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase}
+.db-body{padding:2rem 2.5rem}
+.db-stats{display:flex;gap:1.5rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.db-stat{background:rgba(255,255,255,.04);border:1px solid rgba(245,239,230,.08);padding:1.2rem 1.8rem;text-align:center;min-width:120px}
+.db-stat-num{font-family:'Cinzel',serif;font-size:2rem;color:var(--warm)}
+.db-stat-label{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,239,230,.4);margin-top:.3rem}
+.db-filters{display:flex;gap:.6rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.db-filter{padding:.45rem 1rem;border:1px solid rgba(245,239,230,.15);color:rgba(245,239,230,.5);background:transparent;cursor:pointer;font-family:'Lato',sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;transition:all .3s}
+.db-filter.active,.db-filter:hover{border-color:var(--warm);color:var(--warm)}
+.fiche{background:rgba(255,255,255,.04);border:1px solid rgba(245,239,230,.08);margin-bottom:1rem}
+.fiche:hover{border-color:rgba(245,239,230,.2)}
+.fiche-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.4rem;cursor:pointer}
+.fiche-nom{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--cream)}
+.fiche-meta{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap}
+.fiche-date{font-size:.72rem;color:rgba(245,239,230,.35)}
+.fiche-motif-tag{padding:.3rem .7rem;border:1px solid var(--warm);color:var(--warm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}
+.fiche-new{padding:.25rem .6rem;background:var(--sage);color:white;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}
+.fiche-body{display:none;padding:1.2rem 1.4rem;border-top:1px solid rgba(245,239,230,.06)}
+.fiche-body.open{display:block;animation:fadeUp .3s ease}
+.fiche-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem 2rem;margin-bottom:1rem}
+.fiche-row{font-size:.83rem;line-height:1.6;margin-bottom:.5rem}
+.fiche-row span{display:block;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,239,230,.35);margin-bottom:.15rem}
+.fiche-row strong{color:var(--cream)}
+.fiche-zones{background:rgba(255,255,255,.03);border-left:3px solid var(--clay);padding:.8rem 1rem;margin-top:.6rem;font-size:.83rem;color:rgba(245,239,230,.65);line-height:1.8}
+.fiche-zones span{display:block;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--clay);margin-bottom:.4rem}
+.fiche-foot{display:flex;gap:.8rem;margin-top:1rem;flex-wrap:wrap}
+.fiche-del{padding:.45rem .9rem;border:1px solid rgba(196,133,90,.4);color:#c4855a;background:transparent;cursor:pointer;font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.fiche-lu{padding:.45rem .9rem;border:1px solid rgba(122,140,110,.4);color:var(--sage);background:transparent;cursor:pointer;font-family:'Lato',sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.fiche-lu.done{background:rgba(122,140,110,.15)}
+
+@media(max-width:800px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  #accueil{grid-template-columns:1fr}
+  .hero-right{display:none}
+  .hero-left{padding:7rem 1.5rem 4rem}
+  .apropos-grid,.resa-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
+  .soins-grid{grid-template-columns:1fr}
+  .form-row,.quiz-field-row,.fiche-grid{grid-template-columns:1fr}
+  .body-map-wrap{gap:2rem}
+  .resultat-card{padding:1.8rem}
+  .db-header{flex-direction:column;gap:1rem;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Mathieu Edel</div>
+  <ul class="nav-links">
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#soins">Soins</a></li>
+    <li><a href="#quiz">Questionnaire</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#reservation" class="nav-cta">Réserver</a>
+</nav>
+
+<div id="accueil">
+  <div class="hero-left">
+    <div class="hero-tag">✦ Médecine Traditionnelle Chinoise · Saint-Dizier</div>
+    <h1>L'équilibre<br>du corps &<br><em>de l'esprit</em></h1>
+    <p class="hero-sub">Praticien certifié en acupuncture et massages thérapeutiques, Mathieu Edel vous accompagne vers un mieux-être profond et durable.</p>
+    <div class="hero-btns">
+      <a href="#quiz" class="btn-primary">Évaluer mon besoin</a>
+      <a href="#soins" class="btn-outline">Découvrir les soins</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-circle"><span class="hero-sym">☯</span></div>
+  </div>
+</div>
+
+<section id="apropos">
+  <div class="container">
+    <div class="apropos-grid">
+      <div style="text-align:center">
+        <div class="yy-wrap">☯</div>
+        <div class="badge"><strong>MTC</strong>Médecine<br>Traditionnelle<br>Chinoise</div>
+      </div>
+      <div class="apropos-text">
+        <div class="sec-tag">À propos</div>
+        <h2>Un praticien<br>à votre <em>écoute</em></h2>
+        <p>Mathieu Edel est un professionnel de la médecine traditionnelle chinoise, installé à Saint-Dizier. Formé aux techniques ancestrales de l'acupuncture et des massages thérapeutiques, il met son expertise au service de votre bien-être.</p>
+        <p>Sa pratique repose sur une vision holistique de la santé : rétablir la circulation de l'énergie vitale — le <em>Qi</em> — pour prévenir et soulager les déséquilibres physiques et émotionnels.</p>
+        <div class="creds">
+          <div class="cred"><span class="cred-icon">🎓</span><div class="cred-text"><strong>Praticien certifié</strong>Formation en médecine chinoise</div></div>
+          <div class="cred"><span class="cred-icon">✦</span><div class="cred-text"><strong>Approche globale</strong>Corps, esprit & énergie</div></div>
+          <div class="cred"><span class="cred-icon">🌿</span><div class="cred-text"><strong>Soins naturels</strong>Sans médicaments</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="soins">
+  <div class="container">
+    <div class="soins-hd">
+      <div class="sec-tag">Prestations</div>
+      <h2>Les soins <em>proposés</em></h2>
+    </div>
+    <div class="soins-grid">
+      <div class="soin-card"><div class="soin-num">01</div><div class="soin-icon">🪡</div><h3>Acupuncture</h3><p>Insertion fine d'aiguilles sur des points précis du méridien énergétique pour rétablir l'équilibre du Qi. Douleur, stress, insomnie et bien plus.</p><div class="soin-price">Séance individuelle · Sur devis</div></div>
+      <div class="soin-card"><div class="soin-num">02</div><div class="soin-icon">🤲</div><h3>Massage Tuina</h3><p>Massage thérapeutique chinois par manipulation des points et méridiens. Soulage les tensions musculaires et restaure l'énergie vitale.</p><div class="soin-price">Séance individuelle · Sur devis</div></div>
+      <div class="soin-card"><div class="soin-num">03</div><div class="soin-icon">🕯️</div><h3>Moxibustion</h3><p>Application de chaleur sur les points d'acupuncture par combustion de moxa. Idéale pour tonifier et stimuler les fonctions organiques.</p><div class="soin-price">Séance individuelle · Sur devis</div></div>
+      <div class="soin-card"><div class="soin-num">04</div><div class="soin-icon">🫧</div><h3>Ventouses</h3><p>Technique de dépression cutanée favorisant la circulation sanguine et lymphatique, dissolvant les tensions profondes des tissus musculaires.</p><div class="soin-price">Séance individuelle · Sur devis</div></div>
+      <div class="soin-card"><div class="soin-num">05</div><div class="soin-icon">🌿</div><h3>Phytothérapie Chinoise</h3><p>Conseils en pharmacopée traditionnelle chinoise : plantes médicinales adaptées à votre constitution pour compléter le traitement.</p><div class="soin-price">Consultation · Sur devis</div></div>
+      <div class="soin-card"><div class="soin-num">06</div><div class="soin-icon">🔍</div><h3>Bilan Énergétique</h3><p>Première consultation approfondie pour établir votre bilan constitutionnel et élaborer un programme de soins personnalisé.</p><div class="soin-price">Première séance · Sur devis</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     QUESTIONNAIRE (8 étapes)
+═══════════════════════════════════ -->
+<section id="quiz">
+  <div class="container">
+    <div class="quiz-intro">
+      <div class="sec-tag">Questionnaire</div>
+      <h2>Quel est votre<br><em>besoin ?</em></h2>
+      <p>Quelques questions pour mieux vous connaître — et permettre à Mathieu Edel de préparer votre consultation en avance.</p>
+    </div>
+    <div class="quiz-progress" id="quiz-progress"></div>
+
+    <!-- ── Étape 1 : Motif ── -->
+    <div class="quiz-etape active" id="etape-1">
+      <div class="quiz-question">Qu'est-ce qui vous amène à consulter ?</div>
+      <div class="quiz-hint">Choisissez ce qui correspond le mieux à votre situation principale.</div>
+      <div class="quiz-choix" id="choix-motif">
+        <button class="quiz-btn" data-val="douleur"><span class="q-icon">🦴</span> Douleurs (dos, articulations, migraines)</button>
+        <button class="quiz-btn" data-val="stress"><span class="q-icon">🌀</span> Stress, anxiété, burn-out</button>
+        <button class="quiz-btn" data-val="sommeil"><span class="q-icon">🌙</span> Troubles du sommeil</button>
+        <button class="quiz-btn" data-val="fatigue"><span class="q-icon">⚡</span> Fatigue chronique, manque d'énergie</button>
+        <button class="quiz-btn" data-val="digestif"><span class="q-icon">🌿</span> Troubles digestifs</button>
+        <button class="quiz-btn" data-val="gyneco"><span class="q-icon">🌸</span> Santé féminine, fertilité, ménopause</button>
+        <button class="quiz-btn" data-val="tabac"><span class="q-icon">🚭</span> Arrêt du tabac ou d'une addiction</button>
+        <button class="quiz-btn" data-val="prevention"><span class="q-icon">🛡️</span> Prévention, renforcement immunitaire</button>
+        <button class="quiz-btn" data-val="autre"><span class="q-icon">💬</span> Autre motif</button>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-next" id="next-1" onclick="aller(2)" disabled>Suivant →</button>
+      </div>
+    </div>
+
+    <!-- ── Étape 2 : Cartographie corporelle ── -->
+    <div class="quiz-etape" id="etape-2">
+      <div class="quiz-question">Où ressentez-vous une gêne sur le corps ?</div>
+      <div class="quiz-hint">Cliquez sur la ou les zones concernées (max 6). Cliquez sur un point rouge pour l'enlever.</div>
+
+      <div class="body-map-wrap">
+        <!-- AVANT -->
+        <div class="body-view">
+          <div class="body-label">Avant</div>
+          <svg id="svg-front" class="body-svg" viewBox="0 0 130 425" onclick="bodyClick(event,'front')" xmlns="http://www.w3.org/2000/svg">
+            <!-- Hover overlay -->
+            <rect class="body-touch" width="130" height="425" rx="4"/>
+            <!-- HEAD -->
+            <ellipse cx="65" cy="30" rx="20" ry="24" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <line x1="57" y1="27" x2="61" y2="27" stroke="#8b5e3c" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="69" y1="27" x2="73" y2="27" stroke="#8b5e3c" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M59,36 Q65,40 71,36" fill="none" stroke="#8b5e3c" stroke-width="1.2"/>
+            <!-- NECK -->
+            <line x1="58" y1="53" x2="58" y2="70" stroke="#8b5e3c" stroke-width="1.6"/>
+            <line x1="72" y1="53" x2="72" y2="70" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- CLAVICLES -->
+            <path d="M58,70 Q48,73 33,68" fill="none" stroke="#8b5e3c" stroke-width="1.3"/>
+            <path d="M72,70 Q82,73 97,68" fill="none" stroke="#8b5e3c" stroke-width="1.3"/>
+            <!-- LEFT ARM outer -->
+            <path d="M33,68 Q16,75 13,92 L11,162 Q10,198 12,228 L14,262 Q15,270 17,276" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- LEFT ARM inner -->
+            <path d="M44,75 Q36,81 34,97 L32,154" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- LEFT HAND -->
+            <path d="M15,276 Q12,284 14,290 Q16,295 20,295 Q24,295 26,290 Q28,284 26,276" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- RIGHT ARM outer -->
+            <path d="M97,68 Q114,75 117,92 L119,162 Q120,198 118,228 L116,262 Q115,270 113,276" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- RIGHT ARM inner -->
+            <path d="M86,75 Q94,81 96,97 L98,154" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- RIGHT HAND -->
+            <path d="M115,276 Q118,284 116,290 Q114,295 110,295 Q106,295 104,290 Q102,284 104,276" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- TORSO LEFT -->
+            <path d="M44,75 Q30,82 26,98 L22,150 Q20,174 22,190 L24,218 Q26,232 30,242 L38,252" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- TORSO RIGHT -->
+            <path d="M86,75 Q100,82 104,98 L108,150 Q110,174 108,190 L106,218 Q104,232 100,242 L92,252" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- CROTCH -->
+            <path d="M38,252 Q52,258 65,258 Q78,258 92,252" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- LEFT LEG outer -->
+            <path d="M38,252 L34,338 Q33,348 34,360 L36,398 Q38,408 42,412" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- LEFT LEG inner -->
+            <path d="M65,258 L63,338 Q62,350 63,362 L63,402" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- LEFT FOOT -->
+            <path d="M42,412 Q37,418 31,420 L21,420 Q15,418 15,413 Q15,409 22,408 L40,407" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- RIGHT LEG outer -->
+            <path d="M92,252 L96,338 Q97,348 96,360 L94,398 Q92,408 88,412" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- RIGHT LEG inner -->
+            <path d="M65,258 L67,338 Q68,350 67,362 L67,402" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- RIGHT FOOT -->
+            <path d="M88,412 Q93,418 99,420 L109,420 Q115,418 115,413 Q115,409 108,408 L90,407" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- NAVEL -->
+            <circle cx="65" cy="190" r="2.2" fill="#8b5e3c" opacity="0.55"/>
+            <!-- KNEE DASHES -->
+            <line x1="34" y1="346" x2="46" y2="346" stroke="#8b5e3c" stroke-width="1" stroke-dasharray="3,2"/>
+            <line x1="84" y1="346" x2="96" y2="346" stroke="#8b5e3c" stroke-width="1" stroke-dasharray="3,2"/>
+          </svg>
+        </div>
+
+        <!-- ARRIÈRE -->
+        <div class="body-view">
+          <div class="body-label">Arrière</div>
+          <svg id="svg-back" class="body-svg" viewBox="0 0 130 425" onclick="bodyClick(event,'back')" xmlns="http://www.w3.org/2000/svg">
+            <rect class="body-touch" width="130" height="425" rx="4"/>
+            <!-- HEAD (back - no face) -->
+            <ellipse cx="65" cy="30" rx="20" ry="24" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- NECK -->
+            <line x1="58" y1="53" x2="58" y2="70" stroke="#8b5e3c" stroke-width="1.6"/>
+            <line x1="72" y1="53" x2="72" y2="70" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- SAME OUTER SHAPE -->
+            <path d="M33,68 Q16,75 13,92 L11,162 Q10,198 12,228 L14,262 Q15,270 17,276" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M44,75 Q36,81 34,97 L32,154" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M15,276 Q12,284 14,290 Q16,295 20,295 Q24,295 26,290 Q28,284 26,276" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M97,68 Q114,75 117,92 L119,162 Q120,198 118,228 L116,262 Q115,270 113,276" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M86,75 Q94,81 96,97 L98,154" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M115,276 Q118,284 116,290 Q114,295 110,295 Q106,295 104,290 Q102,284 104,276" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M44,75 Q30,82 26,98 L22,150 Q20,174 22,190 L24,218 Q26,232 30,242 L38,252" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M86,75 Q100,82 104,98 L108,150 Q110,174 108,190 L106,218 Q104,232 100,242 L92,252" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- GLUTEAL FOLD (replaces crotch) -->
+            <path d="M38,252 Q52,265 65,261 Q78,265 92,252" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- LEG BACK (same as front) -->
+            <path d="M38,252 L34,338 Q33,348 34,360 L36,398 Q38,408 42,412" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M65,261 L63,338 Q62,350 63,362 L63,402" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M42,412 Q37,418 31,420 L21,420 Q15,418 15,413 Q15,409 22,408 L40,407" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M92,252 L96,338 Q97,348 96,360 L94,398 Q92,408 88,412" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M65,261 L67,338 Q68,350 67,362 L67,402" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <path d="M88,412 Q93,418 99,420 L109,420 Q115,418 115,413 Q115,409 108,408 L90,407" fill="none" stroke="#8b5e3c" stroke-width="1.6"/>
+            <!-- SHOULDER BLADES (dashed) -->
+            <path d="M54,90 Q48,108 50,128 Q52,138 58,140" fill="none" stroke="#8b5e3c" stroke-width="1.2" stroke-dasharray="4,3"/>
+            <path d="M76,90 Q82,108 80,128 Q78,138 72,140" fill="none" stroke="#8b5e3c" stroke-width="1.2" stroke-dasharray="4,3"/>
+            <!-- SPINE (dashed) -->
+            <line x1="65" y1="70" x2="65" y2="248" stroke="#8b5e3c" stroke-width="1" stroke-dasharray="4,4"/>
+            <!-- LUMBAR ZONE -->
+            <path d="M50,206 Q58,212 65,210 Q72,212 80,206" fill="none" stroke="#8b5e3c" stroke-width="1.2" stroke-dasharray="4,3"/>
+            <!-- KNEE DASHES -->
+            <line x1="34" y1="346" x2="46" y2="346" stroke="#8b5e3c" stroke-width="1" stroke-dasharray="3,2"/>
+            <line x1="84" y1="346" x2="96" y2="346" stroke="#8b5e3c" stroke-width="1" stroke-dasharray="3,2"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Zones sélectionnées -->
+      <div class="zones-selected" id="zones-selected">
+        <span class="zones-vide" id="zones-vide">Cliquez sur le corps pour indiquer où vous ressentez une gêne</span>
+      </div>
+
+      <div class="quiz-nav">
+        <button class="quiz-back" onclick="aller(1)">← Retour</button>
+        <button class="quiz-next" onclick="aller(3)">Suivant →</button>
+        <button class="quiz-skip" onclick="Q.zones=[];aller(4)">Passer (aucune douleur localisée)</button>
+      </div>
+    </div>
+
+    <!-- ── Étape 3 : Caractéristiques de la douleur ── -->
+    <div class="quiz-etape" id="etape-3">
+      <div class="quiz-question">Comment décririez-vous cette gêne ?</div>
+      <div class="quiz-hint">Ces informations aident le praticien à identifier le type de déséquilibre énergétique.</div>
+
+      <div class="pain-group">
+        <div class="pain-group-title">Nature de la douleur</div>
+        <div class="quiz-choix" id="choix-nature" style="flex-direction:column">
+          <button class="quiz-btn multi" data-val="aigue">⚡ Aiguë, vive, comme un coup ou une piqûre</button>
+          <button class="quiz-btn multi" data-val="sourde">🌑 Sourde, profonde, sensation de pression</button>
+          <button class="quiz-btn multi" data-val="brulante">🔥 Brûlante, chaude, inflammatoire</button>
+          <button class="quiz-btn multi" data-val="elancement">💥 Élancement, pulsation rythmique</button>
+          <button class="quiz-btn multi" data-val="crampe">🌀 Crampe, contraction, spasme</button>
+          <button class="quiz-btn multi" data-val="engourdissement">😶 Engourdissement, fourmillements</button>
+        </div>
+      </div>
+
+      <div class="pain-group">
+        <div class="pain-group-title">Étendue</div>
+        <div class="quiz-choix" id="choix-etendue">
+          <button class="quiz-btn" data-val="localisee">📍 Localisée (point précis)</button>
+          <button class="quiz-btn" data-val="irradiante">↔️ Irradiante (se propage ailleurs)</button>
+          <button class="quiz-btn" data-val="diffuse">🌐 Diffuse (large zone)</button>
+          <button class="quiz-btn" data-val="migratoire">🔀 Migratoire (change de place)</button>
+        </div>
+      </div>
+
+      <div class="pain-group">
+        <div class="pain-group-title">Rythme</div>
+        <div class="quiz-choix" id="choix-rythme">
+          <button class="quiz-btn" data-val="constante">◉ Constante (toujours présente)</button>
+          <button class="quiz-btn" data-val="intermittente">◎ Intermittente (par crises)</button>
+          <button class="quiz-btn" data-val="nocturne">🌙 Surtout nocturne</button>
+          <button class="quiz-btn" data-val="effort">🏃 À l'effort ou au mouvement</button>
+          <button class="quiz-btn" data-val="repos">🛋️ Au repos (diminue à l'activité)</button>
+        </div>
+      </div>
+
+      <div class="pain-group">
+        <div class="pain-group-title">Facteurs</div>
+        <div class="quiz-choix" id="choix-facteurs">
+          <button class="quiz-btn multi" data-val="froid">🧊 Aggravée par le froid</button>
+          <button class="quiz-btn multi" data-val="chaleur">🌡️ Aggravée par la chaleur</button>
+          <button class="quiz-btn multi" data-val="stress-f">😤 Aggravée par le stress</button>
+          <button class="quiz-btn multi" data-val="repas">🍽️ Liée aux repas</button>
+          <button class="quiz-btn multi" data-val="chaleur-soulage">♨️ Soulagée par la chaleur</button>
+          <button class="quiz-btn multi" data-val="pression-soulage">🤲 Soulagée par la pression / massage</button>
+        </div>
+      </div>
+
+      <div class="quiz-nav">
+        <button class="quiz-back" onclick="aller(2)">← Retour</button>
+        <button class="quiz-next" id="next-3" onclick="aller(4)" disabled>Suivant →</button>
+      </div>
+    </div>
+
+    <!-- ── Étape 4 : Durée ── -->
+    <div class="quiz-etape" id="etape-4">
+      <div class="quiz-question">Depuis combien de temps ressentez-vous ce problème ?</div>
+      <div class="quiz-hint">Une estimation suffit.</div>
+      <div class="quiz-choix" id="choix-duree">
+        <button class="quiz-btn" data-val="recent">Moins d'un mois</button>
+        <button class="quiz-btn" data-val="quelques">1 à 6 mois</button>
+        <button class="quiz-btn" data-val="long">6 mois à 2 ans</button>
+        <button class="quiz-btn" data-val="chronique">Plus de 2 ans — chronique</button>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-back" onclick="aller(3)">← Retour</button>
+        <button class="quiz-next" id="next-4" onclick="aller(5)" disabled>Suivant →</button>
+      </div>
+    </div>
+
+    <!-- ── Étape 5 : Intensité ── -->
+    <div class="quiz-etape" id="etape-5">
+      <div class="quiz-question">Quelle est l'intensité de la gêne au quotidien ?</div>
+      <div class="quiz-hint">De 1 (légère, peu gênante) à 5 (très invalidante).</div>
+      <div class="intensite-wrap">
+        <div class="intensite-labels"><span>Légère</span><span>Modérée</span><span>Forte</span></div>
+        <input type="range" id="slider-intensite" min="1" max="5" value="3" oninput="majIntensite(this.value)"/>
+        <div class="intensite-val" id="val-intensite">3 / 5</div>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-back" onclick="aller(4)">← Retour</button>
+        <button class="quiz-next" onclick="aller(6)">Suivant →</button>
+      </div>
+    </div>
+
+    <!-- ── Étape 6 : Suivi médical ── -->
+    <div class="quiz-etape" id="etape-6">
+      <div class="quiz-question">Avez-vous déjà consulté un médecin pour ce problème ?</div>
+      <div class="quiz-choix" id="choix-medecin">
+        <button class="quiz-btn" data-val="oui-traitement">Oui, j'ai un traitement médical en cours</button>
+        <button class="quiz-btn" data-val="oui-insatisfait">Oui, mais sans solution satisfaisante</button>
+        <button class="quiz-btn" data-val="non">Non, c'est ma première démarche</button>
+        <button class="quiz-btn" data-val="complementaire">Je cherche une approche complémentaire</button>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-back" onclick="aller(5)">← Retour</button>
+        <button class="quiz-next" id="next-6" onclick="aller(7)" disabled>Suivant →</button>
+      </div>
+    </div>
+
+    <!-- ── Étape 7 : Attentes ── -->
+    <div class="quiz-etape" id="etape-7">
+      <div class="quiz-question">Qu'espérez-vous de cette consultation ?</div>
+      <div class="quiz-hint">Vous pouvez sélectionner plusieurs réponses.</div>
+      <div class="quiz-choix" id="choix-attentes" style="flex-direction:column">
+        <button class="quiz-btn multi" data-val="soulager">Soulager la douleur ou l'inconfort</button>
+        <button class="quiz-btn multi" data-val="stress-r">Réduire le stress et l'anxiété</button>
+        <button class="quiz-btn multi" data-val="sommeil-r">Améliorer le sommeil</button>
+        <button class="quiz-btn multi" data-val="energie">Retrouver de l'énergie et de la vitalité</button>
+        <button class="quiz-btn multi" data-val="comprendre">Comprendre mon état de santé globalement</button>
+        <button class="quiz-btn multi" data-val="medicaments">Réduire ou éviter les médicaments</button>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-back" onclick="aller(6)">← Retour</button>
+        <button class="quiz-next" id="next-7" onclick="aller(8)" disabled>Suivant →</button>
+      </div>
+    </div>
+
+    <!-- ── Étape 8 : Identité ── -->
+    <div class="quiz-etape" id="etape-8">
+      <div class="quiz-question">Qui êtes-vous ?</div>
+      <div class="quiz-hint">Ces informations permettent à Mathieu Edel de vous identifier avant la consultation.</div>
+      <div class="quiz-field-row">
+        <input class="quiz-field" id="q-prenom" type="text" placeholder="Prénom *" oninput="majIdentite()"/>
+        <input class="quiz-field" id="q-nom" type="text" placeholder="Nom *" oninput="majIdentite()"/>
+      </div>
+      <input class="quiz-field" id="q-tel" type="tel" placeholder="Téléphone (optionnel)"/>
+      <input class="quiz-field" id="q-email" type="email" placeholder="E-mail (optionnel)"/>
+      <div class="quiz-nav">
+        <button class="quiz-back" onclick="aller(7)">← Retour</button>
+        <button class="quiz-next" id="next-8" onclick="terminerQuiz()" disabled>Voir mes résultats ✦</button>
+      </div>
+    </div>
+
+    <!-- ── Résultat ── -->
+    <div id="quiz-resultat">
+      <div class="resultat-card">
+        <div class="resultat-header">
+          <span class="resultat-emoji" id="r-emoji"></span>
+          <div class="resultat-titre" id="r-titre"></div>
+        </div>
+        <p class="resultat-desc" id="r-desc"></p>
+        <div class="resultat-soins" id="r-soins"></div>
+        <div class="resultat-actions">
+          <button class="resultat-resa-btn" onclick="document.querySelector('#reservation').scrollIntoView({behavior:'smooth'})">Prendre rendez-vous →</button>
+          <button class="resultat-restart" onclick="relancerQuiz()">Refaire le questionnaire</button>
+        </div>
+        <p class="resultat-sauvegarde">✓ Vos réponses ont été enregistrées — Mathieu Edel les consultera pour préparer votre rendez-vous.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RÉSERVATION -->
+<section id="reservation">
+  <div class="container">
+    <div class="resa-grid">
+      <div class="resa-info">
+        <div class="sec-tag">Rendez-vous</div>
+        <h2>Réservez<br>votre <em>séance</em></h2>
+        <p>Prenez rendez-vous en ligne ou par téléphone. Mathieu Edel vous reçoit sur mesure dans son cabinet de Saint-Dizier.</p>
+        <div class="hor-title">Horaires du cabinet</div>
+        <div class="hor-row"><span>Lundi</span><span>9h – 19h</span></div>
+        <div class="hor-row"><span>Mardi</span><span>9h – 19h</span></div>
+        <div class="hor-row"><span>Mercredi</span><span>9h – 19h</span></div>
+        <div class="hor-row"><span>Jeudi</span><span>9h – 19h</span></div>
+        <div class="hor-row"><span>Vendredi</span><span>9h – 18h</span></div>
+        <div class="hor-row"><span>Samedi</span><span>9h – 13h</span></div>
+        <div class="hor-row off"><span>Dimanche</span><span>Fermé</span></div>
+      </div>
+      <div class="form-card">
+        <h3>Formulaire de demande</h3>
+        <div class="form-row">
+          <div class="form-group"><label>Prénom</label><input id="prenom" type="text" placeholder="Votre prénom"/></div>
+          <div class="form-group"><label>Nom</label><input id="nom" type="text" placeholder="Votre nom"/></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Téléphone</label><input id="tel" type="tel" placeholder="+33 6 XX XX XX XX"/></div>
+          <div class="form-group"><label>E-mail</label><input id="email" type="email" placeholder="votre@email.com"/></div>
+        </div>
+        <div class="form-group">
+          <label>Type de soin</label>
+          <select id="soin">
+            <option value="">Choisissez un soin</option>
+            <option>Acupuncture</option><option>Massage Tuina</option><option>Moxibustion</option>
+            <option>Ventouses</option><option>Phytothérapie Chinoise</option><option>Bilan Énergétique</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Date souhaitée</label><input id="date" type="date"/></div>
+          <div class="form-group">
+            <label>Créneau préféré</label>
+            <select id="heure">
+              <option value="">Choisir</option>
+              <option>Matin (9h – 12h)</option><option>Après-midi (14h – 17h)</option><option>Fin de journée (17h – 19h)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label>Message (optionnel)</label><textarea id="message" placeholder="Décrivez brièvement votre motif de consultation..."></textarea></div>
+        <button class="btn-submit" onclick="envoyerFormulaire()">Envoyer la demande</button>
+        <p class="form-note">Mathieu Edel vous contactera pour confirmer votre rendez-vous dans les 24h.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="sec-tag">Contact & Accès</div>
+    <h2 style="margin-bottom:3rem">Nous <em>trouver</em></h2>
+    <div class="contact-grid">
+      <div>
+        <h3>Cabinet de Médecine Chinoise</h3>
+        <div class="c-item"><div class="c-icon">📍</div><div class="c-text"><strong>Adresse</strong>Cabinet de Médecine Chinoise<br>Saint-Dizier, 52100 — Haute-Marne</div></div>
+        <div class="c-item"><div class="c-icon">📞</div><div class="c-text"><strong>Téléphone</strong><a href="tel:+33XXXXXXXXX">+33 X XX XX XX XX</a></div></div>
+        <div class="c-item"><div class="c-icon">✉</div><div class="c-text"><strong>E-mail</strong><a href="mailto:contact@mathieu-edel.fr">contact@mathieu-edel.fr</a></div></div>
+        <div class="c-item"><div class="c-icon">🕐</div><div class="c-text"><strong>Horaires</strong>Lun–Ven : 9h–19h · Sam : 9h–13h<br>Fermé le dimanche</div></div>
+      </div>
+      <div class="map-box">
+        <span style="font-size:3rem;z-index:1">📍</span>
+        <p><strong style="font-family:'Cinzel',serif;letter-spacing:.1em;color:#1a1410">Saint-Dizier</strong><br>Haute-Marne, Grand Est</p>
+        <button class="map-btn" onclick="window.open('https://maps.google.com/?q=Saint-Dizier+52100','_blank')">Ouvrir dans Google Maps</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo" id="footer-logo" onclick="clicLogo()">Mathieu Edel</span>
+  <div class="footer-links">
+    <a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#soins">Soins</a>
+    <a href="#quiz">Questionnaire</a><a href="#reservation">Réservation</a><a href="#contact">Contact</a>
+  </div>
+  <p>© 2025 Mathieu Edel · Praticien en Médecine Traditionnelle Chinoise · Saint-Dizier</p>
+</footer>
+
+<div id="toast"></div>
+
+<!-- MOT DE PASSE -->
+<div id="overlay-pwd" style="display:none">
+  <div class="pwd-box">
+    <h3>Espace praticien</h3>
+    <p>Entrez votre mot de passe pour accéder au tableau de bord.</p>
+    <input type="password" id="pwd-input" placeholder="••••••••" onkeydown="if(event.key==='Enter')verifierPwd()"/>
+    <div class="pwd-err" id="pwd-err"></div>
+    <div class="pwd-btns">
+      <button class="pwd-cancel" onclick="fermerPwd()">Annuler</button>
+      <button class="pwd-ok" onclick="verifierPwd()">Accéder</button>
+    </div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard">
+  <div class="db-header">
+    <div>
+      <div class="db-title">Tableau de bord — Mathieu Edel</div>
+      <div class="db-subtitle" id="db-subtitle"></div>
+    </div>
+    <div class="db-actions">
+      <button class="db-btn" onclick="exporterCSV()">⬇ Exporter CSV</button>
+      <button class="db-btn danger" onclick="toutEffacer()">🗑 Tout effacer</button>
+      <button class="db-close" onclick="fermerDashboard()">✕ Fermer</button>
+    </div>
+  </div>
+  <div class="db-body">
+    <div class="db-stats" id="db-stats"></div>
+    <div class="db-filters" id="db-filters"></div>
+    <div id="db-fiches"></div>
+  </div>
+</div>
+
+<script>
+/* ════════════════════════════════════
+   DONNÉES RÉPONSES
+════════════════════════════════════ */
+const REPONSES = {
+  douleur:{emoji:'🦴',titre:'Douleurs & tensions',desc:`Les douleurs chroniques trouvent souvent leur origine dans des blocages du Qi et du Sang dans les méridiens. L'acupuncture agit directement sur ces points pour libérer les blocages, réduire l'inflammation et stimuler la libération d'endorphines naturelles. La cartographie corporelle que vous avez renseignée orientera précisément les points à traiter.`,soins:['Acupuncture','Ventouses','Massage Tuina','Moxibustion']},
+  stress:{emoji:'🌀',titre:'Stress & anxiété',desc:`Le stress chronique perturbe la libre circulation du Qi, affectant le foie, le cœur et les reins selon la médecine chinoise. L'acupuncture régule le système nerveux autonome, abaisse le cortisol et favorise une détente profonde. Combinée au massage Tuina, elle permet de retrouver calme et clarté mentale.`,soins:['Acupuncture','Massage Tuina','Phytothérapie Chinoise']},
+  sommeil:{emoji:'🌙',titre:'Troubles du sommeil',desc:`L'insomnie traduit souvent un déséquilibre Yin/Yang ou une agitation du Shen (esprit). L'acupuncture sur les points spécifiques du cœur et des reins favorise la sécrétion de mélatonine et la transition vers un sommeil profond. Les résultats sont souvent perceptibles dès les premières séances.`,soins:['Acupuncture','Phytothérapie Chinoise','Massage Tuina']},
+  fatigue:{emoji:'⚡',titre:'Fatigue & vitalité',desc:`La fatigue chronique correspond à un vide du Qi ou du Yang. La moxibustion est particulièrement efficace pour tonifier les points d'énergie profonde. L'acupuncture stimulera les méridiens de la rate et des reins, piliers de l'énergie en médecine chinoise.`,soins:['Moxibustion','Acupuncture','Phytothérapie Chinoise','Bilan Énergétique']},
+  digestif:{emoji:'🌿',titre:'Troubles digestifs',desc:`Ballonnements, transit irrégulier, reflux… en MTC, ces troubles sont liés à un déséquilibre Rate-Estomac. L'acupuncture régule le péristaltisme et réduit l'inflammation. La phytothérapie chinoise viendra prolonger l'action des séances.`,soins:['Acupuncture','Phytothérapie Chinoise','Massage Tuina']},
+  gyneco:{emoji:'🌸',titre:'Santé féminine',desc:`Règles douloureuses, fertilité, ménopause… la MTC a développé une approche précise de la santé féminine. L'acupuncture régule le cycle hormonal naturellement, réduit les douleurs et accompagne les transitions importantes de la vie.`,soins:['Acupuncture','Phytothérapie Chinoise','Moxibustion']},
+  tabac:{emoji:'🚭',titre:'Sevrage & addictions',desc:`L'auriculothérapie (acupuncture auriculaire) est reconnue pour son efficacité dans les sevrages. Elle réduit les envies impulsives, apaise les symptômes de manque et agit sur les centres de récompense du cerveau.`,soins:['Acupuncture','Phytothérapie Chinoise']},
+  prevention:{emoji:'🛡️',titre:'Prévention & immunité',desc:`La MTC est avant tout une médecine préventive. Des séances saisonnières renforcent le Wei Qi (énergie défensive), stimulent l'immunité et maintiennent l'harmonie du corps. Un bilan énergétique est le point de départ idéal.`,soins:['Bilan Énergétique','Acupuncture','Moxibustion','Phytothérapie Chinoise']},
+  autre:{emoji:'💬',titre:'Consultation sur mesure',desc:`Chaque patient est unique. Mathieu Edel établira un bilan énergétique complet lors de la première consultation pour identifier précisément vos déséquilibres et proposer un programme de soins adapté.`,soins:['Bilan Énergétique','Acupuncture','Massage Tuina']}
+};
+
+/* ════════════════════════════════════
+   ÉTAT QUIZ
+════════════════════════════════════ */
+const Q = {
+  motif:'', zones:[], douleurNature:[], douleurEtendue:'', douleurRythme:'', douleurFacteurs:[],
+  duree:'', intensite:3, medecin:'', attentes:[], prenom:'', nom:'', tel:'', email:''
+};
+const TOTAL = 8;
+
+// Init progress bar
+(function(){
+  const bar = document.getElementById('quiz-progress');
+  for(let i=1;i<=TOTAL;i++){
+    const d=document.createElement('div');
+    d.className='quiz-progress-dot'+(i===1?' active':'');
+    d.id='dot-'+i;
+    bar.appendChild(d);
+  }
+})();
+
+function majProgress(n){
+  for(let i=1;i<=TOTAL;i++){
+    document.getElementById('dot-'+i).className='quiz-progress-dot'+(i<n?' done':i===n?' active':'');
+  }
+}
+
+function aller(n){
+  document.querySelectorAll('.quiz-etape').forEach(e=>e.classList.remove('active'));
+  const el = document.getElementById('etape-'+n);
+  if(el){ el.classList.add('active'); el.scrollIntoView({behavior:'smooth',block:'start'}); }
+  else { document.getElementById('quiz-resultat').style.display='block'; document.getElementById('quiz-resultat').scrollIntoView({behavior:'smooth'}); }
+  majProgress(n);
+}
+
+// ── Choix uniques ──
+function initUnique(id, prop, btnId){
+  document.getElementById(id).querySelectorAll('.quiz-btn:not(.multi)').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.getElementById(id).querySelectorAll('.quiz-btn').forEach(b=>b.classList.remove('selected'));
+      btn.classList.add('selected');
+      Q[prop]=btn.dataset.val;
+      if(btnId) document.getElementById(btnId).disabled=false;
+    });
+  });
+}
+initUnique('choix-motif','motif','next-1');
+initUnique('choix-duree','duree','next-4');
+initUnique('choix-medecin','medecin','next-6');
+
+// Étendue (unique)
+document.getElementById('choix-etendue').querySelectorAll('.quiz-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.getElementById('choix-etendue').querySelectorAll('.quiz-btn').forEach(b=>b.classList.remove('selected'));
+    btn.classList.add('selected');
+    Q.douleurEtendue=btn.dataset.val;
+    document.getElementById('next-3').disabled=false;
+  });
+});
+
+// Rythme (unique)
+document.getElementById('choix-rythme').querySelectorAll('.quiz-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.getElementById('choix-rythme').querySelectorAll('.quiz-btn').forEach(b=>b.classList.remove('selected'));
+    btn.classList.add('selected');
+    Q.douleurRythme=btn.dataset.val;
+    document.getElementById('next-3').disabled=!Q.douleurEtendue;
+  });
+});
+
+// Multi: nature douleur
+document.getElementById('choix-nature').querySelectorAll('.quiz-btn.multi').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btn.classList.toggle('selected');
+    Q.douleurNature = Array.from(document.querySelectorAll('#choix-nature .quiz-btn.selected')).map(b=>b.dataset.val);
+  });
+});
+
+// Multi: facteurs
+document.getElementById('choix-facteurs').querySelectorAll('.quiz-btn.multi').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btn.classList.toggle('selected');
+    Q.douleurFacteurs = Array.from(document.querySelectorAll('#choix-facteurs .quiz-btn.selected')).map(b=>b.dataset.val);
+  });
+});
+
+// Multi: attentes
+document.getElementById('choix-attentes').querySelectorAll('.quiz-btn.multi').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btn.classList.toggle('selected');
+    Q.attentes = Array.from(document.querySelectorAll('#choix-attentes .quiz-btn.selected')).map(b=>b.dataset.val);
+    document.getElementById('next-7').disabled=Q.attentes.length===0;
+  });
+});
+
+function majIntensite(v){ Q.intensite=parseInt(v); document.getElementById('val-intensite').textContent=v+' / 5'; }
+function majIdentite(){
+  Q.prenom=document.getElementById('q-prenom').value.trim();
+  Q.nom=document.getElementById('q-nom').value.trim();
+  document.getElementById('next-8').disabled=!(Q.prenom&&Q.nom);
+}
+
+/* ════════════════════════════════════
+   BODY MAP
+════════════════════════════════════ */
+// Detect body region from click coordinates (viewBox 130×425)
+function detectZone(x, y, isFront){
+  const px=x/130, py=y/425;
+  if(py<0.13) return 'Tête';
+  if(py<0.18 && px>0.38 && px<0.62) return isFront?'Cou':'Nuque';
+  // Arms zone (wide on sides)
+  if(py>0.16 && py<0.72 && px<0.18) return 'Bras gauche';
+  if(py>0.16 && py<0.72 && px>0.82) return 'Bras droit';
+  // Shoulders
+  if(py<0.25 && px<0.36) return isFront?'Épaule gauche':'Épaule droite';
+  if(py<0.25 && px>0.64) return isFront?'Épaule droite':'Épaule gauche';
+  // Torso zones
+  if(py<0.42 && px>0.26 && px<0.74) return isFront?'Thorax / Poitrine':'Haut du dos';
+  if(py<0.52 && px>0.26 && px<0.74) return isFront?'Abdomen':'Milieu du dos';
+  if(py<0.63 && px>0.24 && px<0.76) return isFront?'Bas-ventre / Bassin':'Lombaires';
+  if(py<0.67) return isFront?'Hanche / Aine':'Fessier';
+  // Legs
+  if(py<0.82){
+    if(px<0.50) return isFront?'Cuisse gauche':'Cuisse gauche (arrière)';
+    return isFront?'Cuisse droite':'Cuisse droite (arrière)';
+  }
+  if(py<0.87) return 'Genou';
+  if(py<0.97){
+    if(px<0.50) return isFront?'Jambe gauche':'Mollet gauche';
+    return isFront?'Jambe droite':'Mollet droit';
+  }
+  return isFront?'Cheville / Pied':'Talon / Pied';
+}
+
+function bodyClick(event, side){
+  const svg = event.currentTarget;
+  const rect = svg.getBoundingClientRect();
+  const scaleX = 130 / rect.width;
+  const scaleY = 425 / rect.height;
+  const vbX = (event.clientX - rect.left) * scaleX;
+  const vbY = (event.clientY - rect.top) * scaleY;
+  const isFront = side==='front';
+  const zone = detectZone(vbX, vbY, isFront);
+  const label = (isFront?'🫁 ':'🔙 ')+zone+(isFront?' (avant)':' (arrière)');
+
+  // Skip if already added or max reached
+  if(Q.zones.find(z=>z.label===label)) return;
+  if(Q.zones.length>=6){ showToast('Maximum 6 zones sélectionnées.'); return; }
+
+  // Add SVG dot
+  const ns='http://www.w3.org/2000/svg';
+  const g=document.createElementNS(ns,'g');
+  g.dataset.label=label;
+
+  const outer=document.createElementNS(ns,'circle');
+  outer.setAttribute('cx',vbX);outer.setAttribute('cy',vbY);outer.setAttribute('r','9');
+  outer.setAttribute('fill','#c4855a');outer.setAttribute('opacity','0.25');
+  g.appendChild(outer);
+
+  const dot=document.createElementNS(ns,'circle');
+  dot.setAttribute('cx',vbX);dot.setAttribute('cy',vbY);dot.setAttribute('r','5.5');
+  dot.setAttribute('fill','#c4855a');dot.setAttribute('stroke','white');dot.setAttribute('stroke-width','1.5');
+  g.appendChild(dot);
+
+  g.style.cursor='pointer';
+  g.onclick=(e)=>{ e.stopPropagation(); supprimerZone(label, g, svg); };
+  svg.appendChild(g);
+
+  Q.zones.push({label, svgId:svg.id});
+  majZonesList();
+}
+
+function supprimerZone(label, gEl, svg){
+  Q.zones = Q.zones.filter(z=>z.label!==label);
+  if(gEl && svg) svg.removeChild(gEl);
+  majZonesList();
+}
+
+function majZonesList(){
+  const el=document.getElementById('zones-selected');
+  const vide=document.getElementById('zones-vide');
+  // Remove old tags
+  el.querySelectorAll('.zone-tag').forEach(t=>t.remove());
+  vide.style.display=Q.zones.length?'none':'';
+  Q.zones.forEach(z=>{
+    const tag=document.createElement('div');
+    tag.className='zone-tag';
+    tag.innerHTML=z.label+'<button onclick="supprimerZoneParLabel(\''+z.label.replace(/'/g,"\\'")+'\')" title="Retirer">×</button>';
+    el.appendChild(tag);
+  });
+}
+
+function supprimerZoneParLabel(label){
+  Q.zones = Q.zones.filter(z=>z.label!==label);
+  // Also remove dot from SVG
+  ['svg-front','svg-back'].forEach(id=>{
+    const svg=document.getElementById(id);
+    svg.querySelectorAll('g[data-label]').forEach(g=>{
+      if(g.dataset.label===label) svg.removeChild(g);
+    });
+  });
+  majZonesList();
+}
+
+/* ════════════════════════════════════
+   TERMINER QUIZ
+════════════════════════════════════ */
+function terminerQuiz(){
+  Q.tel=document.getElementById('q-tel').value.trim();
+  Q.email=document.getElementById('q-email').value.trim();
+  const rep=REPONSES[Q.motif]||REPONSES.autre;
+
+  document.getElementById('r-emoji').textContent=rep.emoji;
+  document.getElementById('r-titre').textContent=rep.titre;
+  document.getElementById('r-desc').textContent=rep.desc;
+  const soinsEl=document.getElementById('r-soins');
+  soinsEl.innerHTML='';
+  rep.soins.forEach(s=>{const t=document.createElement('span');t.className='resultat-soin-tag';t.textContent=s;soinsEl.appendChild(t);});
+
+  document.querySelectorAll('.quiz-etape').forEach(e=>e.classList.remove('active'));
+  document.getElementById('quiz-progress').style.display='none';
+  document.getElementById('quiz-resultat').style.display='block';
+  document.getElementById('quiz-resultat').scrollIntoView({behavior:'smooth'});
+  sauvegarder(rep);
+}
+
+function sauvegarder(rep){
+  const NATURE_L={aigue:'Aiguë / vive',sourde:'Sourde / pression',brulante:'Brûlante',elancement:'Élancement',crampe:'Crampe / spasme',engourdissement:'Engourdissement'};
+  const ETENDUE_L={localisee:'Localisée',irradiante:'Irradiante',diffuse:'Diffuse',migratoire:'Migratoire'};
+  const RYTHME_L={constante:'Constante',intermittente:'Intermittente',nocturne:'Nocturne',effort:'À l\'effort',repos:'Au repos'};
+  const FACTEUR_L={froid:'Aggravée froid',chaleur:'Aggravée chaleur','stress-f':'Aggravée stress',repas:'Liée repas','chaleur-soulage':'Soulagée chaleur','pression-soulage':'Soulagée pression'};
+  const MOTIF_L={douleur:'Douleurs',stress:'Stress/Anxiété',sommeil:'Sommeil',fatigue:'Fatigue',digestif:'Digestif',gyneco:'Santé féminine',tabac:'Sevrage',prevention:'Prévention',autre:'Autre'};
+  const DUREE_L={recent:'< 1 mois',quelques:'1–6 mois',long:'6 mois–2 ans',chronique:'Chronique (+2 ans)'};
+  const MEDECIN_L={'oui-traitement':'Traitement en cours','oui-insatisfait':'Consulté, sans solution','non':'1ère démarche','complementaire':'Cherche complémentaire'};
+  const ATTENTES_L={soulager:'Soulager douleur','stress-r':'Réduire stress','sommeil-r':'Sommeil',energie:'Énergie',comprendre:'Comprendre état',medicaments:'Réduire médicaments'};
+
+  const fiches=JSON.parse(localStorage.getItem('edel_fiches')||'[]');
+  fiches.unshift({
+    id:Date.now(),
+    date:new Date().toLocaleString('fr-FR'),
+    prenom:Q.prenom,nom:Q.nom,tel:Q.tel,email:Q.email,
+    motif:Q.motif,motifLabel:MOTIF_L[Q.motif]||Q.motif,
+    zones:Q.zones.map(z=>z.label),
+    douleurNature:Q.douleurNature.map(v=>NATURE_L[v]||v),
+    douleurEtendue:ETENDUE_L[Q.douleurEtendue]||Q.douleurEtendue||'—',
+    douleurRythme:RYTHME_L[Q.douleurRythme]||Q.douleurRythme||'—',
+    douleurFacteurs:Q.douleurFacteurs.map(v=>FACTEUR_L[v]||v),
+    duree:DUREE_L[Q.duree]||Q.duree,
+    intensite:Q.intensite,
+    medecin:MEDECIN_L[Q.medecin]||Q.medecin,
+    attentes:Q.attentes.map(v=>ATTENTES_L[v]||v),
+    lu:false
+  });
+  localStorage.setItem('edel_fiches',JSON.stringify(fiches));
+}
+
+function relancerQuiz(){
+  Object.assign(Q,{motif:'',zones:[],douleurNature:[],douleurEtendue:'',douleurRythme:'',douleurFacteurs:[],duree:'',intensite:3,medecin:'',attentes:[],prenom:'',nom:'',tel:'',email:''});
+  document.querySelectorAll('.quiz-btn').forEach(b=>b.classList.remove('selected'));
+  document.querySelectorAll('.quiz-next').forEach(b=>b.disabled=true);
+  document.getElementById('slider-intensite').value=3;
+  document.getElementById('val-intensite').textContent='3 / 5';
+  ['q-prenom','q-nom','q-tel','q-email'].forEach(id=>document.getElementById(id).value='');
+  // Clear SVG dots
+  ['svg-front','svg-back'].forEach(id=>{ document.getElementById(id).querySelectorAll('g[data-label]').forEach(g=>g.remove()); });
+  majZonesList();
+  document.getElementById('quiz-resultat').style.display='none';
+  document.getElementById('quiz-progress').style.display='flex';
+  aller(1);
+}
+
+/* ════════════════════════════════════
+   RÉSERVATION
+════════════════════════════════════ */
+document.getElementById('date').min=new Date().toISOString().split('T')[0];
+function envoyerFormulaire(){
+  const ids=['prenom','nom','tel','email','soin'];
+  let ok=true;
+  ids.forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el.value.trim()){el.classList.add('err');ok=false;}else el.classList.remove('err');
+  });
+  if(!ok)return;
+  ids.forEach(id=>document.getElementById(id).value='');
+  document.getElementById('date').value='';
+  document.getElementById('heure').selectedIndex=0;
+  document.getElementById('message').value='';
+  showToast('✓ Demande envoyée ! Mathieu Edel vous recontactera sous 24h.');
+}
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').style.padding=window.scrollY>60?'0.8rem 4rem':'1.2rem 4rem';
+});
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),4000);
+}
+
+/* ════════════════════════════════════
+   DASHBOARD PRATICIEN
+   Accès : 5× clic sur "Mathieu Edel" dans le footer
+   Mot de passe : edel2025
+════════════════════════════════════ */
+let clics=0,timerC;
+function clicLogo(){clics++;clearTimeout(timerC);timerC=setTimeout(()=>clics=0,2000);if(clics>=5){clics=0;ouvrirPwd();}}
+function ouvrirPwd(){document.getElementById('overlay-pwd').style.display='flex';setTimeout(()=>document.getElementById('pwd-input').focus(),80);}
+function fermerPwd(){document.getElementById('overlay-pwd').style.display='none';document.getElementById('pwd-input').value='';document.getElementById('pwd-err').textContent='';}
+function verifierPwd(){if(document.getElementById('pwd-input').value==='edel2025'){fermerPwd();ouvrirDashboard();}else document.getElementById('pwd-err').textContent='Mot de passe incorrect.';}
+
+let filtreActif='tous';
+function ouvrirDashboard(){document.getElementById('dashboard').classList.add('on');renderDashboard(JSON.parse(localStorage.getItem('edel_fiches')||'[]'));}
+function fermerDashboard(){document.getElementById('dashboard').classList.remove('on');}
+
+function renderDashboard(fiches){
+  const nouveau=fiches.filter(f=>!f.lu).length;
+  document.getElementById('db-stats').innerHTML=`
+    <div class="db-stat"><div class="db-stat-num">${fiches.length}</div><div class="db-stat-label">Questionnaires</div></div>
+    <div class="db-stat"><div class="db-stat-num" style="color:#7a8c6e">${nouveau}</div><div class="db-stat-label">Non lus</div></div>
+    <div class="db-stat"><div class="db-stat-num">${fiches.filter(f=>f.lu).length}</div><div class="db-stat-label">Traités</div></div>`;
+  document.getElementById('db-subtitle').textContent=fiches.length+' fiche'+(fiches.length>1?'s':'')+' reçue'+(fiches.length>1?'s':'');
+
+  const motifs=['tous',...new Set(fiches.map(f=>f.motif))];
+  const fEl=document.getElementById('db-filters');fEl.innerHTML='';
+  motifs.forEach(m=>{
+    const b=document.createElement('button');
+    b.className='db-filter'+(m===filtreActif?' active':'');
+    b.textContent=m==='tous'?'Tous':({douleur:'Douleurs',stress:'Stress',sommeil:'Sommeil',fatigue:'Fatigue',digestif:'Digestif',gyneco:'Santé féminine',tabac:'Sevrage',prevention:'Prévention',autre:'Autre'}[m]||m);
+    b.onclick=()=>{filtreActif=m;document.querySelectorAll('.db-filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderFiches(fiches);};
+    fEl.appendChild(b);
+  });
+  renderFiches(fiches);
+}
+
+function renderFiches(fiches){
+  const fil=filtreActif==='tous'?fiches:fiches.filter(f=>f.motif===filtreActif);
+  const el=document.getElementById('db-fiches');
+  if(!fil.length){el.innerHTML='<div style="text-align:center;padding:4rem;color:rgba(245,239,230,.3);font-style:italic">Aucune fiche pour ce filtre.</div>';return;}
+  el.innerHTML='';
+  fil.forEach(f=>{
+    const zonesHtml=f.zones&&f.zones.length
+      ?'<div class="fiche-zones"><span>Zones douloureuses</span>'+f.zones.join(' · ')+'</div>'
+      :'';
+    const natureHtml=(f.douleurNature&&f.douleurNature.length)?f.douleurNature.join(', '):'—';
+    const facteursHtml=(f.douleurFacteurs&&f.douleurFacteurs.length)?f.douleurFacteurs.join(', '):'—';
+    const div=document.createElement('div');div.className='fiche';div.id='fiche-'+f.id;
+    div.innerHTML=`
+      <div class="fiche-header" onclick="toggleFiche(${f.id})">
+        <div class="fiche-nom">${f.prenom} ${f.nom.toUpperCase()}</div>
+        <div class="fiche-meta">
+          <span class="fiche-date">${f.date}</span>
+          <span class="fiche-motif-tag">${f.motifLabel}</span>
+          ${!f.lu?'<span class="fiche-new">Nouveau</span>':''}
+        </div>
+      </div>
+      <div class="fiche-body" id="body-${f.id}">
+        <div class="fiche-grid">
+          <div class="fiche-row"><span>Téléphone</span><strong>${f.tel||'Non renseigné'}</strong></div>
+          <div class="fiche-row"><span>E-mail</span><strong>${f.email||'Non renseigné'}</strong></div>
+          <div class="fiche-row"><span>Durée</span><strong>${f.duree}</strong></div>
+          <div class="fiche-row"><span>Intensité</span><strong>${f.intensite} / 5</strong></div>
+          <div class="fiche-row"><span>Étendue</span><strong>${f.douleurEtendue}</strong></div>
+          <div class="fiche-row"><span>Rythme</span><strong>${f.douleurRythme}</strong></div>
+          <div class="fiche-row"><span>Nature de la douleur</span><strong>${natureHtml}</strong></div>
+          <div class="fiche-row"><span>Facteurs</span><strong>${facteursHtml}</strong></div>
+          <div class="fiche-row"><span>Suivi médical</span><strong>${f.medecin}</strong></div>
+          <div class="fiche-row"><span>Attentes</span><strong>${(f.attentes||[]).join(', ')||'—'}</strong></div>
+        </div>
+        ${zonesHtml}
+        <div class="fiche-foot">
+          <button class="fiche-lu${f.lu?' done':''}" onclick="marquerLu(${f.id})">${f.lu?'✓ Traité':'Marquer traité'}</button>
+          <button class="fiche-del" onclick="supprimerFiche(${f.id})">Supprimer</button>
+        </div>
+      </div>`;
+    el.appendChild(div);
+  });
+}
+
+function toggleFiche(id){document.getElementById('body-'+id).classList.toggle('open');}
+function marquerLu(id){
+  const f=JSON.parse(localStorage.getItem('edel_fiches')||'[]');
+  const item=f.find(x=>x.id===id);if(item)item.lu=!item.lu;
+  localStorage.setItem('edel_fiches',JSON.stringify(f));
+  renderDashboard(f);
+  setTimeout(()=>{const b=document.getElementById('body-'+id);if(b)b.classList.add('open');},10);
+}
+function supprimerFiche(id){
+  if(!confirm('Supprimer cette fiche ?'))return;
+  const f=JSON.parse(localStorage.getItem('edel_fiches')||'[]').filter(x=>x.id!==id);
+  localStorage.setItem('edel_fiches',JSON.stringify(f));renderDashboard(f);
+}
+function toutEffacer(){
+  if(!confirm('Effacer TOUTES les fiches ? Irréversible.'))return;
+  localStorage.removeItem('edel_fiches');renderDashboard([]);
+}
+function exporterCSV(){
+  const fiches=JSON.parse(localStorage.getItem('edel_fiches')||'[]');
+  if(!fiches.length){showToast('Aucune fiche à exporter.');return;}
+  const ent=['Date','Prénom','Nom','Téléphone','Email','Motif','Zones douloureuses','Nature','Étendue','Rythme','Facteurs','Durée','Intensité','Suivi médical','Attentes','Lu'];
+  const lig=fiches.map(f=>[
+    f.date,f.prenom,f.nom,f.tel||'',f.email||'',f.motifLabel,
+    (f.zones||[]).join(' | '),(f.douleurNature||[]).join(' | '),
+    f.douleurEtendue,f.douleurRythme,(f.douleurFacteurs||[]).join(' | '),
+    f.duree,f.intensite+'/5',f.medecin,(f.attentes||[]).join(' | '),f.lu?'Oui':'Non'
+  ].map(v=>'"'+String(v||'').replace(/"/g,'""')+'"').join(';'));
+  const csv='\uFEFF'+[ent.join(';'),...lig].join('\n');
+  const a=document.createElement('a');
+  a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
+  a.download='fiches-'+new Date().toISOString().split('T')[0]+'.csv';
+  a.click();
+}
+</script>
+</body>
+</html>
