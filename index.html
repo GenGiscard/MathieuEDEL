@@ -1248,12 +1248,12 @@ async function sauvegarder(rep){
 }
 
 function relancerQuiz(){
-  Object.assign(Q,{motif:'',zones:[],douleurNature:[],douleurEtendue:'',douleurRythme:'',douleurFacteurs:[],duree:'',intensite:3,medecin:'',attentes:[],prenom:'',nom:'',tel:'',email:''});
+  Object.assign(Q,{motif:'',zones:[],douleurNature:[],douleurEtendue:'',douleurRythme:'',douleurFacteurs:[],duree:'',intensite:3,medecin:'',attentes:[],nom:''});
   document.querySelectorAll('.quiz-btn').forEach(b=>b.classList.remove('selected'));
   document.querySelectorAll('.quiz-next').forEach(b=>b.disabled=true);
   document.getElementById('slider-intensite').value=3;
   document.getElementById('val-intensite').textContent='3 / 5';
-  ['q-prenom','q-nom','q-tel','q-email'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; });
+  const qNom=document.getElementById('q-nom'); if(qNom) qNom.value='';
   // Clear SVG dots
   ['svg-front','svg-back'].forEach(id=>{ document.getElementById(id).querySelectorAll('g[data-label]').forEach(g=>g.remove()); });
   majZonesList();
@@ -1622,7 +1622,7 @@ function renderFichesFiltered(entries){
     const div=document.createElement('div');div.className='fiche';div.id='fiche-'+f.fbKey;
     div.innerHTML=`
       <div class="fiche-header" onclick="toggleFiche('${f.fbKey}')">
-        <div class="fiche-nom">${f.prenom||'?'} ${(f.nom||'').toUpperCase()} <span style="font-family:'Lato',sans-serif;font-size:.75rem;color:rgba(245,239,230,.35);font-weight:300">— ${f.date||'—'}</span></div>
+        <div class="fiche-nom">${(f.nom||'Patient inconnu').toUpperCase()} <span style="font-family:'Lato',sans-serif;font-size:.75rem;color:rgba(245,239,230,.35);font-weight:300">— ${f.date||'—'}</span></div>
         <div class="fiche-meta">
           <span class="fiche-motif-tag">${f.motifLabel||f.motif||'—'}</span>
           ${!f.lu?'<span class="fiche-new">Nouveau</span>':''}
@@ -1630,8 +1630,6 @@ function renderFichesFiltered(entries){
       </div>
       <div class="fiche-body" id="body-${f.fbKey}">
         <div class="fiche-grid">
-          <div class="fiche-row"><span>Téléphone</span><strong>${f.tel||'—'}</strong></div>
-          <div class="fiche-row"><span>E-mail</span><strong>${f.email||'—'}</strong></div>
           <div class="fiche-row"><span>Durée</span><strong>${f.duree||'—'}</strong></div>
           <div class="fiche-row"><span>Intensité</span><strong>${f.intensite||'—'} / 5</strong></div>
           <div class="fiche-row"><span>Étendue</span><strong>${f.douleurEtendue||'—'}</strong></div>
